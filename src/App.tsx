@@ -90,9 +90,8 @@ function App() {
     if (currentChallenge.answers.includes(cleanAnswer)) {
       setChallengeSuccess(true);
       setTimeout(() => {
-        window.open('https://instagram.com/artem_akopian', '_blank');
         setIsChallengeOpen(false);
-      }, 1000);
+      }, 3000);
     } else {
       setChallengeError(true);
       setTimeout(() => setChallengeError(false), 2000);

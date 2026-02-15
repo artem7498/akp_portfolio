@@ -121,7 +121,7 @@ const translations: Record<Language, Translations> = {
       placeholder: 'Your answer...',
       submit: 'Check',
       error: 'Wrong! Try again.',
-      success: 'Correct! Opening...',
+      success: 'Nice to see, but maybe another time?)',
     },
   },
   ru: {
@@ -196,7 +196,7 @@ const translations: Record<Language, Translations> = {
       placeholder: 'Ваш ответ...',
       submit: 'Проверить',
       error: 'Неверно! Попробуйте еще раз.',
-      success: 'Верно! Открываю...',
+      success: 'Это приятно видеть, но может быть в другой раз?)',
     },
   },
 };
