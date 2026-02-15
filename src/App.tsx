@@ -23,6 +23,49 @@ const projectImages = [
   travelImg
 ];
 
+const challenges = [
+  {
+    code: `var a = 1
+var b = 1
+
+let closure = { [a] in
+    print(a, b)
+}
+
+a = 2
+b = 2
+
+closure()`,
+    answers: ['1 2', '1 and 2', '1, 2']
+  },
+  {
+    code: `func test() {
+    defer { print("1") }
+    defer { print("2") }
+    print("3")
+}
+
+test()`,
+    answers: ['3 2 1', '3, 2, 1', '3 2 1']
+  },
+  {
+    code: `var a = [1, 2]
+var b = a
+b.append(3)
+
+print(a.count)`,
+    answers: ['2']
+  },
+  {
+    code: `enum Direction: Int {
+    case up, down, left, right
+}
+
+print(Direction.left.rawValue)`,
+    answers: ['2']
+  }
+];
+
 function App() {
   const year = new Date().getFullYear();
   const { language, setLanguage, t } = useLanguage();
@@ -30,9 +73,12 @@ function App() {
   const [challengeAnswer, setChallengeAnswer] = useState('');
   const [challengeError, setChallengeError] = useState(false);
   const [challengeSuccess, setChallengeSuccess] = useState(false);
+  const [currentChallenge, setCurrentChallenge] = useState(challenges[0]);
 
   const handleInstagramClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+    setCurrentChallenge(randomChallenge);
     setIsChallengeOpen(true);
     setChallengeAnswer('');
     setChallengeError(false);
@@ -40,12 +86,8 @@ function App() {
   };
 
   const checkAnswer = () => {
-    // Tricky Swift Question:
-    // Struct vs Class capture semantics in closure
-    // var a = 1; var b = 1; closure = { [a] in print(a,b) }; a=2; b=2; closure()
-    // Answer: 1 2 (or "1, 2" or "1 and 2")
     const cleanAnswer = challengeAnswer.trim().replace(/,/g, ' ').replace(/\s+/g, ' ');
-    if (cleanAnswer === '1 2' || cleanAnswer === '1 and 2' || cleanAnswer === '1, 2') {
+    if (currentChallenge.answers.includes(cleanAnswer)) {
       setChallengeSuccess(true);
       setTimeout(() => {
         window.open('https://instagram.com/artem_akopian', '_blank');
@@ -67,17 +109,7 @@ function App() {
             
             <div className="code-block">
               <pre>
-{`var a = 1
-var b = 1
-
-let closure = { [a] in
-    print(a, b)
-}
-
-a = 2
-b = 2
-
-closure()`}
+{currentChallenge.code}
               </pre>
             </div>
 
