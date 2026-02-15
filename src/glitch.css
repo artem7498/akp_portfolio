@@ -38,35 +38,35 @@
 
 @keyframes glitch-anim-1 {
   0% { opacity: 0; transform: translate(0) scale(1); filter: hue-rotate(0deg); }
-  2% { opacity: 0.8; transform: translate(-3px, 1px) scale(1.02); filter: hue-rotate(90deg); }
-  4% { opacity: 0.8; transform: translate(3px, -1px) scale(1.05); filter: hue-rotate(180deg); }
-  6% { opacity: 0; transform: translate(0) scale(1); }
+  0.5% { opacity: 0.8; transform: translate(-3px, 1px) scale(1.02); filter: hue-rotate(90deg); }
+  1% { opacity: 0.8; transform: translate(3px, -1px) scale(1.05); filter: hue-rotate(180deg); }
+  1.5% { opacity: 0; transform: translate(0) scale(1); }
   20% { opacity: 0; transform: translate(0); }
-  22% { opacity: 0.8; transform: translate(4px, 2px) scale(1.02); filter: invert(0.2); }
-  24% { opacity: 0; transform: translate(0); }
+  20.5% { opacity: 0.8; transform: translate(4px, 2px) scale(1.02); filter: invert(0.2); }
+  21% { opacity: 0; transform: translate(0); }
   100% { opacity: 0; transform: translate(0); }
 }
 
 @keyframes glitch-anim-2 {
   0% { opacity: 0; transform: translate(0); }
   10% { opacity: 0; transform: translate(0); }
-  12% { opacity: 0.8; transform: translate(3px, 3px) scale(1.03); filter: hue-rotate(-90deg); }
-  14% { opacity: 0.8; transform: translate(-3px, -3px) scale(1.01); filter: hue-rotate(45deg); }
-  16% { opacity: 0; transform: translate(0); }
+  10.5% { opacity: 0.8; transform: translate(3px, 3px) scale(1.03); filter: hue-rotate(-90deg); }
+  11% { opacity: 0.8; transform: translate(-3px, -3px) scale(1.01); filter: hue-rotate(45deg); }
+  11.5% { opacity: 0; transform: translate(0); }
   40% { opacity: 0; transform: translate(0); }
-  42% { opacity: 0.8; transform: translate(-2px, 2px) scale(1.04); }
-  44% { opacity: 0; transform: translate(0); }
+  40.5% { opacity: 0.8; transform: translate(-2px, 2px) scale(1.04); }
+  41% { opacity: 0; transform: translate(0); }
   100% { opacity: 0; transform: translate(0); }
 }
 
 @keyframes glitch-anim-3 {
   0% { opacity: 0; transform: translate(0); }
   50% { opacity: 0; transform: translate(0); }
-  52% { opacity: 0.8; transform: translate(-4px, 0) scale(1.02); filter: saturate(200%); }
-  54% { opacity: 0.8; transform: translate(4px, 0) scale(1.05); filter: contrast(150%); }
-  56% { opacity: 0; transform: translate(0); }
+  50.5% { opacity: 0.8; transform: translate(-4px, 0) scale(1.02); filter: saturate(200%); }
+  51% { opacity: 0.8; transform: translate(4px, 0) scale(1.05); filter: contrast(150%); }
+  51.5% { opacity: 0; transform: translate(0); }
   70% { opacity: 0; transform: translate(0); }
-  72% { opacity: 0.8; transform: translate(2px, -2px) scale(1.03); }
-  74% { opacity: 0; transform: translate(0); }
+  70.5% { opacity: 0.8; transform: translate(2px, -2px) scale(1.03); }
+  71% { opacity: 0; transform: translate(0); }
   100% { opacity: 0; transform: translate(0); }
 }
