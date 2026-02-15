@@ -4,6 +4,8 @@
   --muted: #656c78;
   --line: #e9eaf0;
   --surface: rgba(255, 255, 255, 0.72);
+  --header-height: 4.6rem;
+  scroll-padding-top: var(--header-height);
 }
 
 * {
@@ -100,6 +102,10 @@ body::after {
 
 main {
   padding: 0.6rem 0 5rem;
+}
+
+section {
+  scroll-margin-top: var(--header-height);
 }
 
 .hero {
