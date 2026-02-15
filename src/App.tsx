@@ -183,10 +183,10 @@ function App() {
             <h2>{t.contacts.title}</h2>
           </div>
           <div className="contact-list">
-            <a href="mailto:you@example.com">you@example.com</a>
-            <a href="https://t.me/yourhandle" target="_blank" rel="noreferrer">
-              @yourhandle
+            <a href="https://t.me/artem7498" target="_blank" rel="noreferrer" className="contact-btn">
+              Telegram: @artem7498
             </a>
+            <a href="mailto:you@example.com">you@example.com</a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
               linkedin.com/in/yourprofile
             </a>

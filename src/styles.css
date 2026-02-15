@@ -260,14 +260,37 @@ main {
 
 .contact-list {
   margin-top: 1rem;
-  display: grid;
-  gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.contact-list a {
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--text);
+  color: var(--bg);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.2s, opacity 0.2s;
+  align-self: flex-start;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.contact-list a:not(.contact-btn) {
   color: #171c24;
   text-decoration: none;
   font-weight: 600;
+  padding: 0.5rem 0;
 }
 
 .contact-list a:hover {
