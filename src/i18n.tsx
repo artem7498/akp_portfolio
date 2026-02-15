@@ -1,8 +1,9 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'ru';
 
 interface Translations {
+  name: string;
   nav: {
     projects: string;
     about: string;
@@ -50,6 +51,7 @@ interface Translations {
 
 const translations: Record<Language, Translations> = {
   en: {
+    name: 'Artem Akopian',
     nav: {
       projects: 'Projects',
       about: 'About',
@@ -102,12 +104,12 @@ const translations: Record<Language, Translations> = {
     },
     about: {
       eyebrow: 'About',
-      title: 'Product-oriented iOS development',
+      title: 'About',
       description: 'I focus on mobile products with high UX quality and stable codebase: architecture, performance, clean releases.',
     },
     contacts: {
       eyebrow: 'Contact',
-      title: "Let's build together",
+      title: 'Contacts',
       telegram: 'Telegram',
       email: 'Email',
       linkedin: 'LinkedIn',
@@ -125,6 +127,7 @@ const translations: Record<Language, Translations> = {
     },
   },
   ru: {
+    name: 'Артём Акопян',
     nav: {
       projects: 'Проекты',
       about: 'Обо мне',
@@ -177,12 +180,12 @@ const translations: Record<Language, Translations> = {
     },
     about: {
       eyebrow: 'Обо мне',
-      title: 'Продуктовая iOS разработка',
+      title: 'Обо мне',
       description: 'Я фокусируюсь на мобильных продуктах с высоким качеством UX и стабильной кодовой базой: архитектура, производительность, аккуратные релизы.',
     },
     contacts: {
       eyebrow: 'Контакты',
-      title: 'Давайте строить вместе',
+      title: 'Контакты',
       telegram: 'Telegram',
       email: 'Email',
       linkedin: 'LinkedIn',

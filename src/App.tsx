@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
 import { useLanguage } from './i18n';
 import avatarImg from './assets/avatar.jpg';
 import avatarGlitchImg from './assets/avatar-glitch.jpg';
@@ -69,6 +70,10 @@ print(Direction.left.rawValue)`,
 function App() {
   const year = new Date().getFullYear();
   const { language, setLanguage, t } = useLanguage();
+  
+  useEffect(() => {
+    document.title = `${t.name} | iOS Portfolio`;
+  }, [t.name]);
   const [isChallengeOpen, setIsChallengeOpen] = useState(false);
   const [challengeAnswer, setChallengeAnswer] = useState('');
   const [challengeError, setChallengeError] = useState(false);
@@ -137,7 +142,7 @@ function App() {
 
       <header className="topbar wrap">
         <a href="#hero" className="brand">
-          Artem Akopian
+          {t.name}
         </a>
         <nav className="menu">
           <a href="#projects">{t.nav.projects}</a>
@@ -157,7 +162,7 @@ function App() {
             <div className="avatar-blur"></div>
             <img 
               src={avatarImg}
-              alt="Artem Akopyan" 
+              alt={t.name} 
               className="avatar"
             />
             <div className="glitch-effect">
@@ -226,7 +231,6 @@ function App() {
 
         <section id="projects" className="projects wrap">
           <div className="section-head">
-            <p className="eyebrow">{t.projects.eyebrow}</p>
             <h2>{t.projects.title}</h2>
           </div>
           <p className="section-subtitle">
@@ -260,7 +264,6 @@ function App() {
 
         <section id="about" className="about wrap">
           <div className="section-head">
-            <p className="eyebrow">{t.about.eyebrow}</p>
             <h2>{t.about.title}</h2>
           </div>
           <p>
@@ -270,7 +273,6 @@ function App() {
 
         <section id="contacts" className="contacts wrap">
           <div className="section-head">
-            <p className="eyebrow">{t.contacts.eyebrow}</p>
             <h2>{t.contacts.title}</h2>
           </div>
           <div className="contact-list">
@@ -300,7 +302,7 @@ function App() {
               </div>
               <div className="contact-info">
                 <span className="contact-label">{t.contacts.linkedin}</span>
-                <span className="contact-value">Artem Akopian</span>
+                <span className="contact-value">{t.name}</span>
               </div>
             </a>
 
@@ -337,7 +339,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer wrap">© {year} Artem Akopian</footer>
+      <footer className="footer wrap">© {year} {t.name}</footer>
     </div>
   );
 }
