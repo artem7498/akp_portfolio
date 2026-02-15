@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from './i18n';
 import avatarImg from './assets/avatar.jpg';
 import avatarGlitchImg from './assets/avatar-glitch.jpg';
@@ -103,6 +102,26 @@ print(Direction.left.rawValue)`,
 function App() {
   const year = new Date().getFullYear();
   const { language, setLanguage, t } = useLanguage();
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target instanceof HTMLElement) {
+            entry.target.dataset.paused = (!entry.isIntersecting).toString();
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    if (carouselRef.current) {
+      observer.observe(carouselRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   
   useEffect(() => {
     document.title = `${t.name} | iOS Portfolio`;
@@ -249,7 +268,7 @@ function App() {
             <span className="skill-chip">Objective-C</span>
           </div>
           
-          <div className="companies-carousel" aria-hidden="true">
+          <div className="companies-carousel" aria-hidden="true" ref={carouselRef}>
             <div className="carousel-track">
               {carouselImages.map((image, index) => (
                 <div className="carousel-image-container" key={index}>
@@ -260,9 +279,19 @@ function App() {
                   />
                 </div>
               ))}
-              {/* Duplicate for seamless loop */}
+              {/* Duplicate images for seamless infinite loop */}
               {carouselImages.map((image, index) => (
-                <div className="carousel-image-container" key={`dup-${index}`}>
+                <div className="carousel-image-container" key={`dup1-${index}`}>
+                  <img 
+                    src={image} 
+                    alt={`Carousel image ${index + 1}`}
+                    className="carousel-image"
+                  />
+                </div>
+              ))}
+              {/* Second duplicate for smoother transition */}
+              {carouselImages.map((image, index) => (
+                <div className="carousel-image-container" key={`dup2-${index}`}>
                   <img 
                     src={image} 
                     alt={`Carousel image ${index + 1}`}

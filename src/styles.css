@@ -508,10 +508,10 @@ section {
 
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-33.333%, 0, 0);
   }
 }
 
@@ -526,8 +526,17 @@ section {
 .carousel-track {
   display: flex;
   gap: 1rem;
-  animation: scroll 10s linear infinite;
+  animation: scroll 40s linear infinite;
   will-change: transform;
+  width: max-content;
+}
+
+.companies-carousel[data-paused="true"] .carousel-track {
+  animation-play-state: paused;
+}
+
+.companies-carousel:hover .carousel-track {
+  animation-play-state: paused;
 }
 
 .carousel-image-container {
