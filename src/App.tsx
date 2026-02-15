@@ -1,4 +1,5 @@
 import { useLanguage } from './i18n';
+import avatarImg from './assets/avatar.jpg';
 
 const projects = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
@@ -39,14 +40,14 @@ function App() {
           <div className="avatar-container">
             <div className="avatar-blur"></div>
             <img 
-              src="/avatar.jpg" 
+              src={avatarImg}
               alt="Artem Akopyan" 
               className="avatar"
             />
             <div className="glitch-effect">
-              <div className="glitch-layer layer-1"></div>
-              <div className="glitch-layer layer-2"></div>
-              <div className="glitch-layer layer-3"></div>
+              <div className="glitch-layer layer-1" style={{ backgroundImage: `url(${avatarImg})` }}></div>
+              <div className="glitch-layer layer-2" style={{ backgroundImage: `url(${avatarImg})` }}></div>
+              <div className="glitch-layer layer-3" style={{ backgroundImage: `url(${avatarImg})` }}></div>
             </div>
           </div>
           <p className="eyebrow">{t.hero.experience}</p>
