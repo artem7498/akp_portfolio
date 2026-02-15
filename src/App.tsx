@@ -9,6 +9,7 @@ import soglasieImg from './assets/soglasie.jpg';
 import tigerImg from './assets/tiger-de-cristal.jpg';
 import lavasheImg from './assets/na-lavashe.jpg';
 import travelImg from './assets/travel-out.jpg';
+import { Send, Mail, Linkedin } from 'lucide-react';
 
 const projectImages = [
   dnsImg,
@@ -183,12 +184,34 @@ function App() {
             <h2>{t.contacts.title}</h2>
           </div>
           <div className="contact-list">
-            <a href="https://t.me/artem7498" target="_blank" rel="noreferrer" className="contact-btn">
-              Telegram: @artem7498
+            <a href="https://t.me/artem7498" target="_blank" rel="noreferrer" className="contact-item">
+              <div className="contact-icon">
+                <Send size={24} />
+              </div>
+              <div className="contact-info">
+                <span className="contact-label">Telegram</span>
+                <span className="contact-value">@artem7498</span>
+              </div>
             </a>
-            <a href="mailto:you@example.com">you@example.com</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
-              linkedin.com/in/yourprofile
+            
+            <a href="mailto:you@example.com" className="contact-item">
+              <div className="contact-icon">
+                <Mail size={24} />
+              </div>
+              <div className="contact-info">
+                <span className="contact-label">Email</span>
+                <span className="contact-value">you@example.com</span>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer" className="contact-item">
+              <div className="contact-icon">
+                <Linkedin size={24} />
+              </div>
+              <div className="contact-info">
+                <span className="contact-label">LinkedIn</span>
+                <span className="contact-value">linkedin.com/in/yourprofile</span>
+              </div>
             </a>
           </div>
         </section>
