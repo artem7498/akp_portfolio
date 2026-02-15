@@ -105,7 +105,7 @@ const translations: Record<Language, Translations> = {
     about: {
       eyebrow: 'About',
       title: 'About',
-      description: 'I focus on mobile products with high UX quality and stable codebase: architecture, performance, clean releases.',
+      description: 'Senior iOS developer with 5+ years of commercial experience in high-load applications. Full-cycle delivery: requirements analysis, architecture, implementation, release, and support. Strong expertise in custom UI (UIKit + SnapKit), stability, and performance for apps with millions of users.',
     },
     contacts: {
       eyebrow: 'Contact',
@@ -181,7 +181,7 @@ const translations: Record<Language, Translations> = {
     about: {
       eyebrow: 'Обо мне',
       title: 'Обо мне',
-      description: 'Я фокусируюсь на мобильных продуктах с высоким качеством UX и стабильной кодовой базой: архитектура, производительность, аккуратные релизы.',
+      description: 'Senior iOS-разработчик с 5+ годами коммерческого опыта в highload-приложениях. Полный цикл: анализ требований, архитектура, реализация, релиз и сопровождение. Сильная экспертиза в кастомном UI (UIKit + SnapKit), стабильности и производительности приложений с миллионами пользователей.',
     },
     contacts: {
       eyebrow: 'Контакты',
