@@ -9,7 +9,7 @@ import soglasieImg from './assets/soglasie.jpg';
 import tigerImg from './assets/tiger-de-cristal.jpg';
 import lavasheImg from './assets/na-lavashe.jpg';
 import travelImg from './assets/travel-out.jpg';
-import { Send, Mail, Linkedin } from 'lucide-react';
+import { Send, Mail, Linkedin, Phone } from 'lucide-react';
 
 const projectImages = [
   dnsImg,
@@ -194,23 +194,33 @@ function App() {
               </div>
             </a>
             
-            <a href="mailto:you@example.com" className="contact-item">
+            <a href="mailto:artem7498@gmail.com" className="contact-item">
               <div className="contact-icon">
                 <Mail size={24} />
               </div>
               <div className="contact-info">
                 <span className="contact-label">Email</span>
-                <span className="contact-value">you@example.com</span>
+                <span className="contact-value">artem7498@gmail.com</span>
               </div>
             </a>
 
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer" className="contact-item">
+            <a href="https://www.linkedin.com/in/artem-akopian-413823206" target="_blank" rel="noreferrer" className="contact-item">
               <div className="contact-icon">
                 <Linkedin size={24} />
               </div>
               <div className="contact-info">
                 <span className="contact-label">LinkedIn</span>
-                <span className="contact-value">linkedin.com/in/yourprofile</span>
+                <span className="contact-value">Artem Akopian</span>
+              </div>
+            </a>
+
+            <a href="tel:+79098587780" className="contact-item">
+              <div className="contact-icon">
+                <Phone size={24} />
+              </div>
+              <div className="contact-info">
+                <span className="contact-label">Phone</span>
+                <span className="contact-value">+7 909 858 77 80</span>
               </div>
             </a>
           </div>
