@@ -125,7 +125,7 @@ function App() {
             />
             
             {challengeError && <p className="error-msg">{t.challenge.error}</p>}
-            {challengeSuccess && <p className="error-msg" style={{color: '#4ade80'}}>{t.challenge.success}</p>}
+            {challengeSuccess && <p className="error-msg" style={{color: '#16a34a', fontWeight: 600}}>{t.challenge.success}</p>}
 
             <div className="challenge-actions">
               <button className="btn-cancel" onClick={() => setIsChallengeOpen(false)}>Cancel</button>
