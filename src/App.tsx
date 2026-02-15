@@ -1,3 +1,5 @@
+import { useLanguage } from './i18n';
+
 const projects = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
   name: `Project ${String(i + 1).padStart(2, '0')}`
@@ -5,6 +7,7 @@ const projects = Array.from({ length: 8 }, (_, i) => ({
 
 function App() {
   const year = new Date().getFullYear();
+  const { language, setLanguage, t } = useLanguage();
 
   return (
     <>
@@ -13,13 +16,22 @@ function App() {
           Artem Akopian
         </a>
         <nav className="menu" aria-label="Main navigation">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contacts">Contacts</a>
+          <a href="#projects">{t.nav.projects}</a>
+          <a href="#about">{t.nav.about}</a>
+          <a href="#contacts">{t.nav.contacts}</a>
         </nav>
-        <a href="#contacts" className="top-btn">
-          Contact
-        </a>
+        <div className="header-actions">
+          <button
+            className="lang-switch"
+            onClick={() => setLanguage(language === 'en' ? 'ru' : 'en')}
+            aria-label="Switch language"
+          >
+            {language === 'en' ? 'RU' : 'EN'}
+          </button>
+          <a href="#contacts" className="top-btn">
+            {t.nav.contactBtn}
+          </a>
+        </div>
       </header>
 
       <main>
@@ -32,8 +44,8 @@ function App() {
               className="avatar"
             />
           </div>
-          <p className="eyebrow">5+ years of experience</p>
-          <h1>iOS Developer</h1>
+          <p className="eyebrow">{t.hero.experience}</p>
+          <h1>{t.hero.role}</h1>
           <div className="skill-chips">
             <span className="skill-chip">Swift</span>
             <span className="skill-chip">Objective-C</span>
@@ -102,11 +114,11 @@ function App() {
 
         <section id="projects" className="projects wrap">
           <div className="section-head">
-            <p className="eyebrow">Selected work</p>
-            <h2>Projects</h2>
+            <p className="eyebrow">{t.projects.eyebrow}</p>
+            <h2>{t.projects.title}</h2>
           </div>
           <p className="section-subtitle">
-            Вертикальные плейсхолдеры под iPhone-скриншоты. Позже заменим на твои реальные экраны.
+            {t.projects.subtitle}
           </p>
 
           <div className="projects-grid">
@@ -117,7 +129,7 @@ function App() {
                   <div className="phone-screen">IPHONE SCREEN {String(project.id).padStart(2, '0')}</div>
                 </div>
                 <h3>{project.name}</h3>
-                <p>Role, stack, measurable impact.</p>
+                <p>{t.projects.cardRole}</p>
               </article>
             ))}
           </div>
@@ -125,19 +137,18 @@ function App() {
 
         <section id="about" className="about wrap">
           <div className="section-head">
-            <p className="eyebrow">About</p>
-            <h2>Product-oriented iOS development</h2>
+            <p className="eyebrow">{t.about.eyebrow}</p>
+            <h2>{t.about.title}</h2>
           </div>
           <p>
-            Я фокусируюсь на мобильных продуктах с высоким качеством UX и стабильной
-            кодовой базой: архитектура, производительность, аккуратные релизы.
+            {t.about.description}
           </p>
         </section>
 
         <section id="contacts" className="contacts wrap">
           <div className="section-head">
-            <p className="eyebrow">Contact</p>
-            <h2>Let&apos;s build together</h2>
+            <p className="eyebrow">{t.contacts.eyebrow}</p>
+            <h2>{t.contacts.title}</h2>
           </div>
           <div className="contact-list">
             <a href="mailto:you@example.com">you@example.com</a>
