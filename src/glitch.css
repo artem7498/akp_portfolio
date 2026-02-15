@@ -25,15 +25,15 @@
 }
 
 .layer-1 {
-  animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
+  animation: glitch-anim-1 5s infinite linear alternate-reverse;
 }
 
 .layer-2 {
-  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  animation: glitch-anim-2 6s infinite linear alternate-reverse;
 }
 
 .layer-3 {
-  animation: glitch-anim-3 2s infinite linear alternate-reverse;
+  animation: glitch-anim-3 4s infinite linear alternate-reverse;
 }
 
 @keyframes glitch-anim-1 {
