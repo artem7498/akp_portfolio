@@ -104,22 +104,22 @@ closure()`}
         </div>
       )}
 
-      <nav className="nav">
-        <header className="topbar wrap">
-          <a href="#hero" className="brand">
-            Artem Akopian
-          </a>
-          <div className="nav-links">
-            <a href="#projects">{t.nav.projects}</a>
-            <a href="#about">{t.nav.about}</a>
-            <a href="#contacts">{t.nav.contacts}</a>
-            <a href="#contacts" className="btn-primary">{t.nav.contactBtn}</a>
-            <button className="lang-switch" onClick={() => setLanguage(language === 'en' ? 'ru' : 'en')}>
-              {language.toUpperCase()}
-            </button>
-          </div>
-        </header>
-      </nav>
+      <header className="topbar wrap">
+        <a href="#hero" className="brand">
+          Artem Akopian
+        </a>
+        <nav className="menu">
+          <a href="#projects">{t.nav.projects}</a>
+          <a href="#about">{t.nav.about}</a>
+          <a href="#contacts">{t.nav.contacts}</a>
+        </nav>
+        <div className="header-actions">
+          <button className="lang-switch" onClick={() => setLanguage(language === 'en' ? 'ru' : 'en')}>
+            {language.toUpperCase()}
+          </button>
+          <a href="#contacts" className="top-btn">{t.nav.contactBtn}</a>
+        </div>
+      </header>
       <main>
         <section id="hero" className="hero wrap">
           <div className="avatar-container">
