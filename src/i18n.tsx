@@ -65,7 +65,7 @@ const translations: Record<Language, Translations> = {
     projects: {
       eyebrow: 'Selected work',
       title: 'Projects',
-      subtitle: 'Vertical placeholders for iPhone screenshots. Will replace with your real screens later.',
+      subtitle: 'Here are just some of the projects.',
       items: [
         {
           title: 'DNS Shop',
@@ -141,7 +141,7 @@ const translations: Record<Language, Translations> = {
     projects: {
       eyebrow: 'Избранные работы',
       title: 'Проекты',
-      subtitle: 'Вертикальные плейсхолдеры под iPhone-скриншоты. Позже заменим на твои реальные экраны.',
+      subtitle: 'Вот лишь некоторые из проектов.',
       items: [
         {
           title: 'DNS Shop',

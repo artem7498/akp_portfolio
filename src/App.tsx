@@ -3,20 +3,20 @@ import { useEffect } from 'react';
 import { useLanguage } from './i18n';
 import avatarImg from './assets/avatar.jpg';
 import avatarGlitchImg from './assets/avatar-glitch.jpg';
-import dnsImg from './assets/dns-shop.jpg';
-import geometryImg from './assets/geometry-fitness.jpg';
-import pizzaImg from './assets/pizza-prosto.jpg';
-import tokyoImg from './assets/tokyo.jpg';
-import soglasieImg from './assets/soglasie.jpg';
-import tigerImg from './assets/tiger-de-cristal.jpg';
-import lavasheImg from './assets/na-lavashe.jpg';
-import travelImg from './assets/travel-out.jpg';
+import dnsImg from './assets/project/DNS.webp';
+import geometryImg from './assets/project/GeometryFitness.png';
+import pizzaImg from './assets/project/PizzaProsto.png';
+import tokyoImg from './assets/project/Tokyo.png';
+import soglasieImg from './assets/project/Soglasie.png';
+import tigerImg from './assets/project/TigerDeCristal.png';
+import lavasheImg from './assets/project/NaLAvashe.png';
+import travelImg from './assets/project/Travelout 1.png';
 
 // Carousel images
-import carousel3 from './assets/carousel/3.webp';
 import carousel6 from './assets/carousel/6.webp';
 import carousel12 from './assets/carousel/12.webp';
 import carousel17 from './assets/carousel/17.webp';
+import carousel3 from './assets/carousel/3.webp';
 import carousel18 from './assets/carousel/18.webp';
 import carousel19 from './assets/carousel/19.webp';
 import carousel20 from './assets/carousel/20.webp';
@@ -285,15 +285,12 @@ function App() {
           <div className="projects-grid">
             {t.projects.items.map((project, index) => (
               <article className="project-card" key={index}>
-                <div className="phone-frame">
-                  <div className="phone-notch" />
-                  <div className="phone-screen">
-                    <img 
-                      src={projectImages[index]} 
-                      alt={project.title}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                  </div>
+                <div className="project-image-container">
+                  <img 
+                    src={projectImages[index]} 
+                    alt={project.title}
+                    className="project-image"
+                  />
                 </div>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>

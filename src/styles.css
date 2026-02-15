@@ -124,7 +124,7 @@ section {
 }
 
 .hero h1 {
-  margin: 1rem 0 0;
+  margin: 1rem 0 0.75rem;
   font-size: clamp(1.6rem, 4.5vw, 3.5rem);
   line-height: 0.98;
   letter-spacing: -0.04em;
@@ -223,39 +223,18 @@ section {
   font-size: 0.92rem;
 }
 
-.phone-frame {
+.project-image-container {
   position: relative;
   aspect-ratio: 9 / 19.5;
-  border-radius: 34px;
-  background: linear-gradient(160deg, #f6f7fb, #eceff5);
-  border: 1px solid #d9dde7;
-  padding: 0.55rem;
-}
-
-.phone-notch {
-  position: absolute;
-  top: 0.52rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 36%;
-  height: 1.2rem;
-  border-radius: 0 0 12px 12px;
-  background: #121722;
-}
-
-.phone-screen {
-  height: 100%;
-  border-radius: 28px;
-  border: 1px dashed #ccd2df;
-  background: linear-gradient(180deg, #ffffff, #f4f6fb);
-  display: grid;
-  place-items: center;
-  color: #8b93a3;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-align: center;
-  padding: 0;
+  border-radius: 24px;
   overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .about p {
