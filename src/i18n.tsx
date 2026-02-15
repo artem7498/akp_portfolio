@@ -121,7 +121,7 @@ const translations: Record<Language, Translations> = {
       placeholder: 'Your answer...',
       submit: 'Check',
       error: 'Wrong! Try again.',
-      success: 'Nice to see, but maybe another time?)',
+      success: 'Nice to see, but better write me on Telegram',
     },
   },
   ru: {
@@ -196,7 +196,7 @@ const translations: Record<Language, Translations> = {
       placeholder: 'Ваш ответ...',
       submit: 'Проверить',
       error: 'Неверно! Попробуйте еще раз.',
-      success: 'Это приятно видеть, но может быть в другой раз?)',
+      success: 'Это приятно видеть, но лучше напиши мне в телеграм',
     },
   },
 };
