@@ -1,5 +1,6 @@
 import { useLanguage } from './i18n';
 import avatarImg from './assets/avatar.jpg';
+import avatarGlitchImg from './assets/avatar-glitch.jpg';
 
 const projects = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
@@ -45,9 +46,9 @@ function App() {
               className="avatar"
             />
             <div className="glitch-effect">
-              <div className="glitch-layer layer-1" style={{ backgroundImage: `url(${avatarImg})` }}></div>
-              <div className="glitch-layer layer-2" style={{ backgroundImage: `url(${avatarImg})` }}></div>
-              <div className="glitch-layer layer-3" style={{ backgroundImage: `url(${avatarImg})` }}></div>
+              <div className="glitch-layer layer-1" style={{ backgroundImage: `url(${avatarGlitchImg})` }}></div>
+              <div className="glitch-layer layer-2" style={{ backgroundImage: `url(${avatarGlitchImg})` }}></div>
+              <div className="glitch-layer layer-3" style={{ backgroundImage: `url(${avatarGlitchImg})` }}></div>
             </div>
           </div>
           <p className="eyebrow">{t.hero.experience}</p>

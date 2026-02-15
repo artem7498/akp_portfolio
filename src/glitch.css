@@ -21,25 +21,19 @@
   background-position: center;
   border-radius: 50%;
   opacity: 0;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: normal;
 }
 
 .layer-1 {
   animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
-  background-color: rgba(255, 0, 0, 0.3);
-  background-blend-mode: overlay;
 }
 
 .layer-2 {
   animation: glitch-anim-2 3s infinite linear alternate-reverse;
-  background-color: rgba(0, 255, 0, 0.3);
-  background-blend-mode: overlay;
 }
 
 .layer-3 {
   animation: glitch-anim-3 2s infinite linear alternate-reverse;
-  background-color: rgba(0, 0, 255, 0.3);
-  background-blend-mode: overlay;
 }
 
 @keyframes glitch-anim-1 {
