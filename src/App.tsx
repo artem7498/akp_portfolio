@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from './i18n';
 import avatarImg from './assets/avatar.jpg';
 import avatarGlitchImg from './assets/avatar-glitch.jpg';
-import dnsImg from './assets/project/DNS.webp';
+import dnsImg from './assets/project/DNS.png';
 import geometryImg from './assets/project/GeometryFitness.png';
 import pizzaImg from './assets/project/PizzaProsto.png';
 import tokyoImg from './assets/project/Tokyo.png';
