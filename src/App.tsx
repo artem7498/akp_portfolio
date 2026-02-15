@@ -208,7 +208,6 @@ function App() {
           <h1>{t.hero.role}</h1>
           <div className="skill-chips">
             <span className="skill-chip">Swift</span>
-            <span className="skill-chip">Objective-C</span>
             <span className="skill-chip">UIKit</span>
             <span className="skill-chip">SwiftUI</span>
             <span className="skill-chip">SnapKit</span>
@@ -247,6 +246,7 @@ function App() {
             <span className="skill-chip">Trello</span>
             <span className="skill-chip">Agile</span>
             <span className="skill-chip">App Store</span>
+            <span className="skill-chip">Objective-C</span>
           </div>
           
           <div className="companies-carousel" aria-hidden="true">
