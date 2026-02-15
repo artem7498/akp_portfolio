@@ -247,7 +247,8 @@ main {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-align: center;
-  padding: 1rem;
+  padding: 0;
+  overflow: hidden;
 }
 
 .about p {

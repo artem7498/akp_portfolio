@@ -17,7 +17,11 @@ interface Translations {
     eyebrow: string;
     title: string;
     subtitle: string;
-    cardRole: string;
+    items: {
+      title: string;
+      description: string;
+      stats?: string;
+    }[];
   };
   about: {
     eyebrow: string;
@@ -46,7 +50,41 @@ const translations: Record<Language, Translations> = {
       eyebrow: 'Selected work',
       title: 'Projects',
       subtitle: 'Vertical placeholders for iPhone screenshots. Will replace with your real screens later.',
-      cardRole: 'Role, stack, measurable impact.',
+      items: [
+        {
+          title: 'DNS Shop',
+          description: 'Digital and home appliance stores.',
+          stats: '10M+ downloads, 4.8 rating'
+        },
+        {
+          title: 'Geometry Fitness',
+          description: 'Automated fitness clubs'
+        },
+        {
+          title: 'PizzaProsto',
+          description: 'Pizza delivery chain'
+        },
+        {
+          title: 'Tokyo',
+          description: 'Delivery and restaurant chain'
+        },
+        {
+          title: 'Soglasie',
+          description: 'Federal retail chain'
+        },
+        {
+          title: 'Tiger de Cristal',
+          description: 'Hotel and Casino'
+        },
+        {
+          title: "Na LAVA'SHE",
+          description: 'Fast food cafe chain'
+        },
+        {
+          title: 'TravelOut',
+          description: 'Own project, travel agent and visas'
+        }
+      ]
     },
     about: {
       eyebrow: 'About',
@@ -73,7 +111,41 @@ const translations: Record<Language, Translations> = {
       eyebrow: 'Избранные работы',
       title: 'Проекты',
       subtitle: 'Вертикальные плейсхолдеры под iPhone-скриншоты. Позже заменим на твои реальные экраны.',
-      cardRole: 'Роль, стек, измеримый результат.',
+      items: [
+        {
+          title: 'DNS Shop',
+          description: 'Магазины цифровой и бытовой техники.',
+          stats: '10М+ скачиваний, рейтинг 4.8'
+        },
+        {
+          title: 'Геометрия Фитнеса',
+          description: 'Автоматизированные фитнес клубы'
+        },
+        {
+          title: 'PizzaProsto',
+          description: 'Сеть доставки пиццы'
+        },
+        {
+          title: 'Tokyo',
+          description: 'Сеть доставки и ресторанов'
+        },
+        {
+          title: 'Soglasie',
+          description: 'Федеральная сеть магазинов'
+        },
+        {
+          title: 'Tiger de Cristal',
+          description: 'Отель и Казино'
+        },
+        {
+          title: "Na LAVA'SHE",
+          description: 'Сеть кафе быстрого питания'
+        },
+        {
+          title: 'TravelOut',
+          description: 'Собственный проект, тревел агент и визы'
+        }
+      ]
     },
     about: {
       eyebrow: 'Обо мне',

@@ -1,11 +1,25 @@
 import { useLanguage } from './i18n';
 import avatarImg from './assets/avatar.jpg';
 import avatarGlitchImg from './assets/avatar-glitch.jpg';
+import dnsImg from './assets/dns-shop.jpg';
+import geometryImg from './assets/geometry-fitness.jpg';
+import pizzaImg from './assets/pizza-prosto.jpg';
+import tokyoImg from './assets/tokyo.jpg';
+import soglasieImg from './assets/soglasie.jpg';
+import tigerImg from './assets/tiger-de-cristal.jpg';
+import lavasheImg from './assets/na-lavashe.jpg';
+import travelImg from './assets/travel-out.jpg';
 
-const projects = Array.from({ length: 8 }, (_, i) => ({
-  id: i + 1,
-  name: `Project ${String(i + 1).padStart(2, '0')}`
-}));
+const projectImages = [
+  dnsImg,
+  geometryImg,
+  pizzaImg,
+  tokyoImg,
+  soglasieImg,
+  tigerImg,
+  lavasheImg,
+  travelImg
+];
 
 function App() {
   const year = new Date().getFullYear();
@@ -129,14 +143,25 @@ function App() {
           </p>
 
           <div className="projects-grid">
-            {projects.map((project) => (
-              <article className="project-card" key={project.id}>
+            {t.projects.items.map((project, index) => (
+              <article className="project-card" key={index}>
                 <div className="phone-frame">
                   <div className="phone-notch" />
-                  <div className="phone-screen">IPHONE SCREEN {String(project.id).padStart(2, '0')}</div>
+                  <div className="phone-screen">
+                    <img 
+                      src={projectImages[index]} 
+                      alt={project.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </div>
                 </div>
-                <h3>{project.name}</h3>
-                <p>{t.projects.cardRole}</p>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                {project.stats && (
+                  <p style={{ fontSize: '0.9em', opacity: 0.8, marginTop: '0.5rem' }}>
+                    {project.stats}
+                  </p>
+                )}
               </article>
             ))}
           </div>
