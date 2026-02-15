@@ -96,7 +96,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('ru'); // Default to Russian as per context, or maybe English? Let's start with RU as the user speaks Russian.
+  const [language, setLanguage] = useState<Language>('ru');
 
   const value = {
     language,

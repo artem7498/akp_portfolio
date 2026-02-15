@@ -43,6 +43,11 @@ function App() {
               alt="Artem Akopyan" 
               className="avatar"
             />
+            <div className="glitch-effect">
+              <div className="glitch-layer layer-1"></div>
+              <div className="glitch-layer layer-2"></div>
+              <div className="glitch-layer layer-3"></div>
+            </div>
           </div>
           <p className="eyebrow">{t.hero.experience}</p>
           <h1>{t.hero.role}</h1>
