@@ -31,6 +31,10 @@ interface Translations {
   contacts: {
     eyebrow: string;
     title: string;
+    telegram: string;
+    email: string;
+    linkedin: string;
+    phone: string;
   };
 }
 
@@ -94,6 +98,10 @@ const translations: Record<Language, Translations> = {
     contacts: {
       eyebrow: 'Contact',
       title: "Let's build together",
+      telegram: 'Telegram',
+      email: 'Email',
+      linkedin: 'LinkedIn',
+      phone: 'Phone',
     },
   },
   ru: {
@@ -155,6 +163,10 @@ const translations: Record<Language, Translations> = {
     contacts: {
       eyebrow: 'Контакты',
       title: 'Давайте строить вместе',
+      telegram: 'Telegram',
+      email: 'Email',
+      linkedin: 'LinkedIn',
+      phone: 'Телефон',
     },
   },
 };

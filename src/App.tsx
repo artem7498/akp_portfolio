@@ -189,7 +189,7 @@ function App() {
                 <Send size={24} />
               </div>
               <div className="contact-info">
-                <span className="contact-label">Telegram</span>
+                <span className="contact-label">{t.contacts.telegram}</span>
                 <span className="contact-value">@artem7498</span>
               </div>
             </a>
@@ -199,7 +199,7 @@ function App() {
                 <Mail size={24} />
               </div>
               <div className="contact-info">
-                <span className="contact-label">Email</span>
+                <span className="contact-label">{t.contacts.email}</span>
                 <span className="contact-value">artem7498@gmail.com</span>
               </div>
             </a>
@@ -209,7 +209,7 @@ function App() {
                 <Linkedin size={24} />
               </div>
               <div className="contact-info">
-                <span className="contact-label">LinkedIn</span>
+                <span className="contact-label">{t.contacts.linkedin}</span>
                 <span className="contact-value">Artem Akopian</span>
               </div>
             </a>
@@ -219,7 +219,7 @@ function App() {
                 <Phone size={24} />
               </div>
               <div className="contact-info">
-                <span className="contact-label">Phone</span>
+                <span className="contact-label">{t.contacts.phone}</span>
                 <span className="contact-value">+7 909 858 77 80</span>
               </div>
             </a>
