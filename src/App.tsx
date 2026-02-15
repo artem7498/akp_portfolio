@@ -309,7 +309,7 @@ closure()`}
               </div>
               <div className="contact-info">
                 <span className="contact-label">{t.contacts.instagram}</span>
-                <span className="contact-value">*****</span>
+                <span className="contact-value">a****n</span>
               </div>
             </div>
           </div>
