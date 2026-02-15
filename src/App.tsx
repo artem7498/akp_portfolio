@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useLanguage } from './i18n';
 import avatarImg from './assets/avatar.jpg';
 import avatarGlitchImg from './assets/avatar-glitch.jpg';
@@ -9,7 +10,7 @@ import soglasieImg from './assets/soglasie.jpg';
 import tigerImg from './assets/tiger-de-cristal.jpg';
 import lavasheImg from './assets/na-lavashe.jpg';
 import travelImg from './assets/travel-out.jpg';
-import { Send, Mail, Linkedin, Phone, MessageCircle } from 'lucide-react';
+import { Send, Mail, Linkedin, Phone, MessageCircle, Instagram } from 'lucide-react';
 
 const projectImages = [
   dnsImg,
@@ -25,32 +26,100 @@ const projectImages = [
 function App() {
   const year = new Date().getFullYear();
   const { language, setLanguage, t } = useLanguage();
+  const [isChallengeOpen, setIsChallengeOpen] = useState(false);
+  const [challengeAnswer, setChallengeAnswer] = useState('');
+  const [challengeError, setChallengeError] = useState(false);
+  const [challengeSuccess, setChallengeSuccess] = useState(false);
+
+  const handleInstagramClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsChallengeOpen(true);
+    setChallengeAnswer('');
+    setChallengeError(false);
+    setChallengeSuccess(false);
+  };
+
+  const checkAnswer = () => {
+    // Tricky Swift Question:
+    // Struct vs Class capture semantics in closure
+    // var a = 1; var b = 1; closure = { [a] in print(a,b) }; a=2; b=2; closure()
+    // Answer: 1 2 (or "1, 2" or "1 and 2")
+    const cleanAnswer = challengeAnswer.trim().replace(/,/g, ' ').replace(/\s+/g, ' ');
+    if (cleanAnswer === '1 2' || cleanAnswer === '1 and 2' || cleanAnswer === '1, 2') {
+      setChallengeSuccess(true);
+      setTimeout(() => {
+        window.open('https://instagram.com/artem7498', '_blank');
+        setIsChallengeOpen(false);
+      }, 1000);
+    } else {
+      setChallengeError(true);
+      setTimeout(() => setChallengeError(false), 2000);
+    }
+  };
 
   return (
-    <>
-      <header className="topbar wrap">
-        <a href="#hero" className="brand">
-          Artem Akopian
-        </a>
-        <nav className="menu" aria-label="Main navigation">
-          <a href="#projects">{t.nav.projects}</a>
-          <a href="#about">{t.nav.about}</a>
-          <a href="#contacts">{t.nav.contacts}</a>
-        </nav>
-        <div className="header-actions">
-          <button
-            className="lang-switch"
-            onClick={() => setLanguage(language === 'en' ? 'ru' : 'en')}
-            aria-label="Switch language"
-          >
-            {language === 'en' ? 'RU' : 'EN'}
-          </button>
-          <a href="#contacts" className="top-btn">
-            {t.nav.contactBtn}
-          </a>
-        </div>
-      </header>
+    <div className="container">
+      {isChallengeOpen && (
+        <div className="modal-overlay" onClick={() => setIsChallengeOpen(false)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <h3 className="modal-title">{t.challenge.title}</h3>
+            <p className="modal-description">{t.challenge.description}</p>
+            
+            <div className="code-block">
+              <pre>
+{`var a = 1
+var b = 1
 
+let closure = { [a] in
+    print(a, b)
+}
+
+a = 2
+b = 2
+
+closure()`}
+              </pre>
+            </div>
+
+            <input 
+              type="text" 
+              className="challenge-input"
+              placeholder={t.challenge.placeholder}
+              value={challengeAnswer}
+              onChange={e => {
+                setChallengeAnswer(e.target.value);
+                setChallengeError(false);
+              }}
+              onKeyDown={e => e.key === 'Enter' && checkAnswer()}
+            />
+            
+            {challengeError && <p className="error-msg">{t.challenge.error}</p>}
+            {challengeSuccess && <p className="error-msg" style={{color: '#4ade80'}}>{t.challenge.success}</p>}
+
+            <div className="challenge-actions">
+              <button className="btn-cancel" onClick={() => setIsChallengeOpen(false)}>Cancel</button>
+              <button className="btn-submit" onClick={checkAnswer}>{t.challenge.submit}</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <nav className="nav">
+        <header className="topbar wrap">
+          <a href="#hero" className="brand">
+            Artem Akopian
+          </a>
+          <div className="nav-links">
+            <a href="#projects">{t.nav.projects}</a>
+            <a href="#about">{t.nav.about}</a>
+            <a href="#contacts">{t.nav.contacts}</a>
+            <a href="#contacts" className="btn-primary">{t.nav.contactBtn}</a>
+            <button className="lang-switch" onClick={() => setLanguage(language === 'en' ? 'ru' : 'en')}>
+              {language.toUpperCase()}
+            </button>
+          </div>
+        </header>
+      </nav>
       <main>
         <section id="hero" className="hero wrap">
           <div className="avatar-container">
@@ -233,12 +302,22 @@ function App() {
                 <span className="contact-value">+7 909 858 77 80</span>
               </div>
             </a>
+
+            <div onClick={handleInstagramClick} className="contact-item">
+              <div className="contact-icon">
+                <Instagram size={24} />
+              </div>
+              <div className="contact-info">
+                <span className="contact-label">{t.contacts.instagram}</span>
+                <span className="contact-value">@artem7498</span>
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="footer wrap">© {year} Artem Akopyan</footer>
-    </>
+      <footer className="footer wrap">© {year} Artem Akopian</footer>
+    </div>
   );
 }
 

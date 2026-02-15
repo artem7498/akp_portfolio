@@ -35,7 +35,16 @@ interface Translations {
     email: string;
     linkedin: string;
     whatsapp: string;
+    instagram: string;
     phone: string;
+  };
+  challenge: {
+    title: string;
+    description: string;
+    placeholder: string;
+    submit: string;
+    error: string;
+    success: string;
   };
 }
 
@@ -103,7 +112,16 @@ const translations: Record<Language, Translations> = {
       email: 'Email',
       linkedin: 'LinkedIn',
       whatsapp: 'WhatsApp',
+      instagram: 'Instagram',
       phone: 'Phone',
+    },
+    challenge: {
+      title: 'Swift Challenge',
+      description: 'Solve the task to open Instagram',
+      placeholder: 'Your answer...',
+      submit: 'Check',
+      error: 'Wrong! Try again.',
+      success: 'Correct! Opening...',
     },
   },
   ru: {
@@ -169,7 +187,16 @@ const translations: Record<Language, Translations> = {
       email: 'Email',
       linkedin: 'LinkedIn',
       whatsapp: 'WhatsApp',
+      instagram: 'Instagram',
       phone: 'Телефон',
+    },
+    challenge: {
+      title: 'Swift Challenge',
+      description: 'Решите задачу, чтобы увидеть Instagram',
+      placeholder: 'Ваш ответ...',
+      submit: 'Проверить',
+      error: 'Неверно! Попробуйте еще раз.',
+      success: 'Верно! Открываю...',
     },
   },
 };
