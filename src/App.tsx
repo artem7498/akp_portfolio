@@ -213,23 +213,13 @@ function App() {
           
           <div className="companies-carousel" aria-hidden="true">
             <div className="carousel-track">
-              <span className="company-name">Sberbank</span>
-              <span className="company-name">Yandex</span>
-              <span className="company-name">Tinkoff</span>
-              <span className="company-name">VK</span>
-              <span className="company-name">Ozon</span>
-              <span className="company-name">Avito</span>
-              <span className="company-name">Delivery Club</span>
-              <span className="company-name">Kaspersky</span>
+              {t.projects.items.map((project, index) => (
+                <span className="company-name" key={index}>{project.title}</span>
+              ))}
               {/* Duplicate for seamless loop */}
-              <span className="company-name">Sberbank</span>
-              <span className="company-name">Yandex</span>
-              <span className="company-name">Tinkoff</span>
-              <span className="company-name">VK</span>
-              <span className="company-name">Ozon</span>
-              <span className="company-name">Avito</span>
-              <span className="company-name">Delivery Club</span>
-              <span className="company-name">Kaspersky</span>
+              {t.projects.items.map((project, index) => (
+                <span className="company-name" key={`dup-${index}`}>{project.title}</span>
+              ))}
             </div>
           </div>
         </section>
