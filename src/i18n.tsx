@@ -59,7 +59,7 @@ const translations: Record<Language, Translations> = {
       contactBtn: 'Contact',
     },
     hero: {
-      experience: '5+ years of experience',
+      experience: '5+ years in the game',
       role: 'iOS Developer',
     },
     projects: {
@@ -135,8 +135,8 @@ const translations: Record<Language, Translations> = {
       contactBtn: 'Связаться',
     },
     hero: {
-      experience: '5+ лет опыта',
-      role: 'iOS Разработчик',
+      experience: 'Более 5 лет в деле',
+      role: 'iOS Developer',
     },
     projects: {
       eyebrow: 'Избранные работы',

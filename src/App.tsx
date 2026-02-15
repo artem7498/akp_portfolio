@@ -11,6 +11,22 @@ import soglasieImg from './assets/soglasie.jpg';
 import tigerImg from './assets/tiger-de-cristal.jpg';
 import lavasheImg from './assets/na-lavashe.jpg';
 import travelImg from './assets/travel-out.jpg';
+
+// Carousel images
+import carousel3 from './assets/carousel/3.webp';
+import carousel6 from './assets/carousel/6.webp';
+import carousel12 from './assets/carousel/12.webp';
+import carousel17 from './assets/carousel/17.webp';
+import carousel18 from './assets/carousel/18.webp';
+import carousel19 from './assets/carousel/19.webp';
+import carousel20 from './assets/carousel/20.webp';
+import carousel21 from './assets/carousel/21.webp';
+import carousel22 from './assets/carousel/22.webp';
+import carousel27 from './assets/carousel/27.webp';
+import carousel28 from './assets/carousel/28.webp';
+import carousel29 from './assets/carousel/29.webp';
+import carousel30 from './assets/carousel/30.webp';
+import carousel32 from './assets/carousel/32.webp';
 import { Send, Mail, Linkedin, Phone, MessageCircle, Instagram } from 'lucide-react';
 
 const projectImages = [
@@ -22,6 +38,23 @@ const projectImages = [
   tigerImg,
   lavasheImg,
   travelImg
+];
+
+const carouselImages = [
+  carousel3,
+  carousel6,
+  carousel12,
+  carousel17,
+  carousel18,
+  carousel19,
+  carousel20,
+  carousel21,
+  carousel22,
+  carousel27,
+  carousel28,
+  carousel29,
+  carousel30,
+  carousel32
 ];
 
 const challenges = [
@@ -218,12 +251,24 @@ function App() {
           
           <div className="companies-carousel" aria-hidden="true">
             <div className="carousel-track">
-              {t.projects.items.map((project, index) => (
-                <span className="company-name" key={index}>{project.title}</span>
+              {carouselImages.map((image, index) => (
+                <div className="carousel-image-container" key={index}>
+                  <img 
+                    src={image} 
+                    alt={`Carousel image ${index + 1}`}
+                    className="carousel-image"
+                  />
+                </div>
               ))}
               {/* Duplicate for seamless loop */}
-              {t.projects.items.map((project, index) => (
-                <span className="company-name" key={`dup-${index}`}>{project.title}</span>
+              {carouselImages.map((image, index) => (
+                <div className="carousel-image-container" key={`dup-${index}`}>
+                  <img 
+                    src={image} 
+                    alt={`Carousel image ${index + 1}`}
+                    className="carousel-image"
+                  />
+                </div>
               ))}
             </div>
           </div>
