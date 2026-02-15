@@ -34,6 +34,7 @@ interface Translations {
     telegram: string;
     email: string;
     linkedin: string;
+    whatsapp: string;
     phone: string;
   };
 }
@@ -101,6 +102,7 @@ const translations: Record<Language, Translations> = {
       telegram: 'Telegram',
       email: 'Email',
       linkedin: 'LinkedIn',
+      whatsapp: 'WhatsApp',
       phone: 'Phone',
     },
   },
@@ -166,6 +168,7 @@ const translations: Record<Language, Translations> = {
       telegram: 'Telegram',
       email: 'Email',
       linkedin: 'LinkedIn',
+      whatsapp: 'WhatsApp',
       phone: 'Телефон',
     },
   },

@@ -9,7 +9,7 @@ import soglasieImg from './assets/soglasie.jpg';
 import tigerImg from './assets/tiger-de-cristal.jpg';
 import lavasheImg from './assets/na-lavashe.jpg';
 import travelImg from './assets/travel-out.jpg';
-import { Send, Mail, Linkedin, Phone } from 'lucide-react';
+import { Send, Mail, Linkedin, Phone, MessageCircle } from 'lucide-react';
 
 const projectImages = [
   dnsImg,
@@ -211,6 +211,16 @@ function App() {
               <div className="contact-info">
                 <span className="contact-label">{t.contacts.linkedin}</span>
                 <span className="contact-value">Artem Akopian</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/79098587780" target="_blank" rel="noreferrer" className="contact-item">
+              <div className="contact-icon">
+                <MessageCircle size={24} />
+              </div>
+              <div className="contact-info">
+                <span className="contact-label">{t.contacts.whatsapp}</span>
+                <span className="contact-value">+7 909 858 77 80</span>
               </div>
             </a>
 
