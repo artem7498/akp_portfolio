@@ -1,0 +1,159 @@
+const projects = Array.from({ length: 8 }, (_, i) => ({
+  id: i + 1,
+  name: `Project ${String(i + 1).padStart(2, '0')}`
+}));
+
+function App() {
+  const year = new Date().getFullYear();
+
+  return (
+    <>
+      <header className="topbar wrap">
+        <a href="#hero" className="brand">
+          Artem Akopian
+        </a>
+        <nav className="menu" aria-label="Main navigation">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contacts">Contacts</a>
+        </nav>
+        <a href="#contacts" className="top-btn">
+          Contact
+        </a>
+      </header>
+
+      <main>
+        <section id="hero" className="hero wrap">
+          <div className="avatar-container">
+            <div className="avatar-blur"></div>
+            <img 
+              src="/avatar.jpg" 
+              alt="Artem Akopyan" 
+              className="avatar"
+            />
+          </div>
+          <p className="eyebrow">5+ years of experience</p>
+          <h1>iOS Developer</h1>
+          <div className="skill-chips">
+            <span className="skill-chip">Swift</span>
+            <span className="skill-chip">Objective-C</span>
+            <span className="skill-chip">UIKit</span>
+            <span className="skill-chip">SwiftUI</span>
+            <span className="skill-chip">SnapKit</span>
+            <span className="skill-chip">Auto Layout</span>
+            <span className="skill-chip">VIPER</span>
+            <span className="skill-chip">MVVM</span>
+            <span className="skill-chip">Tuist</span>
+            <span className="skill-chip">Needle</span>
+            <span className="skill-chip">async/await</span>
+            <span className="skill-chip">Combine</span>
+            <span className="skill-chip">RxSwift</span>
+            <span className="skill-chip">GCD</span>
+            <span className="skill-chip">REST</span>
+            <span className="skill-chip">URLSession</span>
+            <span className="skill-chip">Alamofire</span>
+            <span className="skill-chip">gRPC</span>
+            <span className="skill-chip">Core Data</span>
+            <span className="skill-chip">SwiftData</span>
+            <span className="skill-chip">Realm</span>
+            <span className="skill-chip">Keychain</span>
+            <span className="skill-chip">Fastlane</span>
+            <span className="skill-chip">Firebase</span>
+            <span className="skill-chip">AppMetrica</span>
+            <span className="skill-chip">Lottie</span>
+            <span className="skill-chip">CocoaPods</span>
+            <span className="skill-chip">Swift Package Manager</span>
+            <span className="skill-chip">Git</span>
+            <span className="skill-chip">SwiftLint</span>
+            <span className="skill-chip">Xcode Instruments</span>
+            <span className="skill-chip">Proxyman</span>
+            <span className="skill-chip">SOLID</span>
+            <span className="skill-chip">DRY</span>
+            <span className="skill-chip">KISS</span>
+            <span className="skill-chip">Figma</span>
+            <span className="skill-chip">ClickUp</span>
+            <span className="skill-chip">Trello</span>
+            <span className="skill-chip">Agile</span>
+            <span className="skill-chip">App Store</span>
+          </div>
+          
+          <div className="companies-carousel" aria-hidden="true">
+            <div className="carousel-track">
+              <span className="company-name">Sberbank</span>
+              <span className="company-name">Yandex</span>
+              <span className="company-name">Tinkoff</span>
+              <span className="company-name">VK</span>
+              <span className="company-name">Ozon</span>
+              <span className="company-name">Avito</span>
+              <span className="company-name">Delivery Club</span>
+              <span className="company-name">Kaspersky</span>
+              {/* Duplicate for seamless loop */}
+              <span className="company-name">Sberbank</span>
+              <span className="company-name">Yandex</span>
+              <span className="company-name">Tinkoff</span>
+              <span className="company-name">VK</span>
+              <span className="company-name">Ozon</span>
+              <span className="company-name">Avito</span>
+              <span className="company-name">Delivery Club</span>
+              <span className="company-name">Kaspersky</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" className="projects wrap">
+          <div className="section-head">
+            <p className="eyebrow">Selected work</p>
+            <h2>Projects</h2>
+          </div>
+          <p className="section-subtitle">
+            Вертикальные плейсхолдеры под iPhone-скриншоты. Позже заменим на твои реальные экраны.
+          </p>
+
+          <div className="projects-grid">
+            {projects.map((project) => (
+              <article className="project-card" key={project.id}>
+                <div className="phone-frame">
+                  <div className="phone-notch" />
+                  <div className="phone-screen">IPHONE SCREEN {String(project.id).padStart(2, '0')}</div>
+                </div>
+                <h3>{project.name}</h3>
+                <p>Role, stack, measurable impact.</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="about" className="about wrap">
+          <div className="section-head">
+            <p className="eyebrow">About</p>
+            <h2>Product-oriented iOS development</h2>
+          </div>
+          <p>
+            Я фокусируюсь на мобильных продуктах с высоким качеством UX и стабильной
+            кодовой базой: архитектура, производительность, аккуратные релизы.
+          </p>
+        </section>
+
+        <section id="contacts" className="contacts wrap">
+          <div className="section-head">
+            <p className="eyebrow">Contact</p>
+            <h2>Let&apos;s build together</h2>
+          </div>
+          <div className="contact-list">
+            <a href="mailto:you@example.com">you@example.com</a>
+            <a href="https://t.me/yourhandle" target="_blank" rel="noreferrer">
+              @yourhandle
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
+              linkedin.com/in/yourprofile
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="footer wrap">© {year} Artem Akopyan</footer>
+    </>
+  );
+}
+
+export default App;
