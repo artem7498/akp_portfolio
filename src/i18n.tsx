@@ -22,6 +22,7 @@ interface Translations {
       title: string;
       description: string;
       stats?: string;
+      link?: string;
     }[];
   };
   about: {
@@ -70,23 +71,28 @@ const translations: Record<Language, Translations> = {
         {
           title: 'DNS Shop',
           description: 'Digital and home appliance stores.',
-          stats: '10M+ downloads, 4.8 rating'
+          stats: '10M+ downloads, 4.8 rating',
+          link: 'https://apps.apple.com/app/dns-shop/id123456789'
         },
         {
           title: 'Geometry Fitness',
-          description: 'Automated fitness clubs'
+          description: 'Automated fitness clubs',
+          link: 'https://apps.apple.com/app/geometry-fitness/id987654321'
         },
         {
           title: 'PizzaProsto',
-          description: 'Pizza delivery chain'
+          description: 'Pizza delivery chain',
+          link: 'https://apps.apple.com/app/pizzaprosto/id555555555'
         },
         {
           title: 'Tokyo',
-          description: 'Delivery and restaurant chain'
+          description: 'Delivery and restaurant chain',
+          link: 'https://apps.apple.com/app/tokyo/id777777777'
         },
         {
           title: 'Soglasie',
-          description: 'Federal retail chain'
+          description: 'Federal retail chain',
+          link: 'https://apps.apple.com/app/soglasie/id333333333'
         },
         {
           title: 'Tiger de Cristal',
@@ -146,23 +152,28 @@ const translations: Record<Language, Translations> = {
         {
           title: 'DNS Shop',
           description: 'Магазины цифровой и бытовой техники.',
-          stats: '10М+ скачиваний, рейтинг 4.8'
+          stats: '10М+ скачиваний, рейтинг 4.8',
+          link: 'https://apps.apple.com/app/dns-shop/id123456789'
         },
         {
           title: 'Геометрия Фитнеса',
-          description: 'Автоматизированные фитнес клубы'
+          description: 'Автоматизированные фитнес клубы',
+          link: 'https://apps.apple.com/app/geometry-fitness/id987654321'
         },
         {
           title: 'PizzaProsto',
-          description: 'Сеть доставки пиццы'
+          description: 'Сеть доставки пиццы',
+          link: 'https://apps.apple.com/app/pizzaprosto/id555555555'
         },
         {
           title: 'Tokyo',
-          description: 'Сеть доставки и ресторанов'
+          description: 'Сеть доставки и ресторанов',
+          link: 'https://apps.apple.com/app/tokyo/id777777777'
         },
         {
           title: 'Soglasie',
-          description: 'Федеральная сеть магазинов'
+          description: 'Федеральная сеть магазинов',
+          link: 'https://apps.apple.com/app/soglasie/id333333333'
         },
         {
           title: 'Tiger de Cristal',

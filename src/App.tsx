@@ -27,7 +27,7 @@ import carousel28 from './assets/carousel/28.webp';
 import carousel29 from './assets/carousel/29.webp';
 import carousel30 from './assets/carousel/30.webp';
 import carousel32 from './assets/carousel/32.webp';
-import { Send, Mail, Linkedin, Phone, MessageCircle, Instagram } from 'lucide-react';
+import { Send, Mail, Linkedin, Phone, MessageCircle, Instagram, ExternalLink } from 'lucide-react';
 
 const projectImages = [
   dnsImg,
@@ -41,12 +41,12 @@ const projectImages = [
 ];
 
 const carouselImages = [
-  carousel3,
   carousel6,
   carousel12,
   carousel17,
   carousel18,
   carousel19,
+  carousel3,
   carousel20,
   carousel21,
   carousel22,
@@ -292,7 +292,12 @@ function App() {
                     className="project-image"
                   />
                 </div>
-                <h3>{project.title}</h3>
+                <h3 className="project-title">
+                  <a href={project.link || '#'} target="_blank" rel="noreferrer" className="project-link">
+                    {project.title}
+                    <ExternalLink size={16} className="external-link-icon" />
+                  </a>
+                </h3>
                 <p>{project.description}</p>
                 {project.stats && (
                   <p style={{ fontSize: '0.9em', opacity: 0.8, marginTop: '0.5rem' }}>
