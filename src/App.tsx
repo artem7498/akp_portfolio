@@ -48,7 +48,7 @@ function App() {
     if (cleanAnswer === '1 2' || cleanAnswer === '1 and 2' || cleanAnswer === '1, 2') {
       setChallengeSuccess(true);
       setTimeout(() => {
-        window.open('https://instagram.com/artem7498', '_blank');
+        window.open('https://instagram.com/artem_akopian', '_blank');
         setIsChallengeOpen(false);
       }, 1000);
     } else {
@@ -309,7 +309,7 @@ closure()`}
               </div>
               <div className="contact-info">
                 <span className="contact-label">{t.contacts.instagram}</span>
-                <span className="contact-value">@artem7498</span>
+                <span className="contact-value">*****</span>
               </div>
             </div>
           </div>
