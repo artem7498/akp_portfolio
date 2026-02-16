@@ -535,22 +535,15 @@ section {
   animation-play-state: paused;
 }
 
-.companies-carousel:hover .carousel-track {
-  animation-play-state: paused;
-}
-
 .carousel-image-container {
   flex-shrink: 0;
   width: 200px;
   height: 120px;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 
-.carousel-image-container:hover {
-  transform: scale(1.05);
-}
+
 
 .carousel-image {
   width: 100%;
@@ -591,6 +584,12 @@ section {
 @media (max-width: 520px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .project-image-container {
+    width: 50%;
+    margin: 0 auto;
   }
   
   .carousel-track {
