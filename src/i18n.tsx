@@ -66,7 +66,7 @@ const translations: Record<Language, Translations> = {
     projects: {
       eyebrow: 'Selected work',
       title: 'Projects',
-      subtitle: 'Here are just some of the projects.',
+      subtitle: 'Or rather, just a few of them.',
       items: [
         {
           title: 'DNS Shop',
@@ -150,7 +150,7 @@ const translations: Record<Language, Translations> = {
     projects: {
       eyebrow: 'Избранные работы',
       title: 'Проекты',
-      subtitle: 'Вот лишь некоторые из проектов.',
+      subtitle: 'Точнее лишь некоторые из них',
       items: [
         {
           title: 'DNS Shop',
