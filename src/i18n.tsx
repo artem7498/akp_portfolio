@@ -82,7 +82,7 @@ const translations: Record<Language, Translations> = {
         {
           title: 'PizzaProsto',
           description: 'Pizza delivery chain',
-          link: 'https://apps.apple.com/app/pizzaprosto/id555555555'
+          link: 'https://apps.apple.com/app/pizzaprosto/id5555555555'
         },
         {
           title: 'Tokyo',
