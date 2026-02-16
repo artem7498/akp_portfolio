@@ -72,39 +72,42 @@ const translations: Record<Language, Translations> = {
           title: 'DNS Shop',
           description: 'Digital and home appliance stores.',
           stats: '10M+ downloads, 4.8 rating',
-          link: 'https://apps.apple.com/app/dns-shop/id123456789'
+          link: 'https://apps.apple.com/app/id6450819523'
         },
         {
           title: 'Geometry Fitness',
           description: 'Automated fitness clubs',
-          link: 'https://apps.apple.com/app/geometry-fitness/id987654321'
+          link: 'https://apps.apple.com/app/id6470616810'
         },
         {
           title: 'PizzaProsto',
           description: 'Pizza delivery chain',
-          link: 'https://apps.apple.com/app/pizzaprosto/id5555555555'
+          link: 'https://apps.apple.com/app/id6479388649'
         },
         {
           title: 'Tokyo',
           description: 'Delivery and restaurant chain',
-          link: 'https://apps.apple.com/app/tokyo/id777777777'
+          link: 'https://apps.apple.com/app/id1596026466'
         },
         {
           title: 'Soglasie',
           description: 'Federal retail chain',
-          link: 'https://apps.apple.com/app/soglasie/id333333333'
+          link: 'https://apps.apple.com/app/id1592065394'
         },
         {
           title: 'Tiger de Cristal',
-          description: 'Hotel and Casino'
+          description: 'Hotel and Casino',
+          link: 'https://apps.apple.com/app/id6443473064'
         },
         {
           title: "Na LAVA'SHE",
-          description: 'Fast food cafe chain'
+          description: 'Fast food cafe chain',
+          link: 'https://apps.apple.com/app/id1609014254'
         },
         {
           title: 'TravelOut',
-          description: 'Own project, travel agent and visas'
+          description: 'Own project, travel agent and visas',
+          link: 'https://apps.apple.com/app/id6450002751'
         }
       ]
     },
@@ -153,39 +156,42 @@ const translations: Record<Language, Translations> = {
           title: 'DNS Shop',
           description: 'Магазины цифровой и бытовой техники.',
           stats: '10М+ скачиваний, рейтинг 4.8',
-          link: 'https://apps.apple.com/app/dns-shop/id123456789'
+          link: 'https://apps.apple.com/app/id6450819523'
         },
         {
           title: 'Геометрия Фитнеса',
           description: 'Автоматизированные фитнес клубы',
-          link: 'https://apps.apple.com/app/geometry-fitness/id987654321'
+          link: 'https://apps.apple.com/app/id6470616810'
         },
         {
           title: 'PizzaProsto',
           description: 'Сеть доставки пиццы',
-          link: 'https://apps.apple.com/app/pizzaprosto/id555555555'
+          link: 'https://apps.apple.com/app/id6479388649'
         },
         {
           title: 'Tokyo',
           description: 'Сеть доставки и ресторанов',
-          link: 'https://apps.apple.com/app/tokyo/id777777777'
+          link: 'https://apps.apple.com/app/id1596026466'
         },
         {
           title: 'Soglasie',
           description: 'Федеральная сеть магазинов',
-          link: 'https://apps.apple.com/app/soglasie/id333333333'
+          link: 'https://apps.apple.com/app/id1592065394'
         },
         {
           title: 'Tiger de Cristal',
-          description: 'Отель и Казино'
+          description: 'Отель и Казино',
+          link: 'https://apps.apple.com/app/id6443473064'
         },
         {
           title: "Na LAVA'SHE",
-          description: 'Сеть кафе быстрого питания'
+          description: 'Сеть кафе быстрого питания',
+          link: 'https://apps.apple.com/app/id1609014254'
         },
         {
           title: 'TravelOut',
-          description: 'Собственный проект, тревел агент и визы'
+          description: 'Собственный проект, тревел агент и визы',
+          link: 'https://apps.apple.com/app/id6450002751'
         }
       ]
     },
